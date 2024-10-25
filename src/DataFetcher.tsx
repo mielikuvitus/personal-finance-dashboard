@@ -1,5 +1,6 @@
-import axios from 'axios';
+// import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { fetchTransactions } from './mock-api';
 
 interface TransactionData {
   status: string;
@@ -16,7 +17,7 @@ const DataFetcher: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
+  /*   useEffect(() => {
     axios
       .get('/api/transactions')
       .then((response) => {
@@ -25,6 +26,19 @@ const DataFetcher: React.FC = () => {
       })
       .catch((error) => {
         setError('Failed to fetch data:');
+        setLoading(false);
+      });
+  }, []); */
+
+  useEffect(() => {
+    setLoading(true);
+    fetchTransactions()
+      .then((response) => {
+        setData(response);
+        setLoading(false);
+      })
+      .catch((error) => {
+        setError(error);
         setLoading(false);
       });
   }, []);

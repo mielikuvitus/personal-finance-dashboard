@@ -1,11 +1,11 @@
 import './App.css';
-import IncomeExpenceTracker from './IncomeExpenceTracker';
+import IncomeExpenseTracker from './IncomeExpenseTracker';
 import DataFetcher from './DataFetcher';
 
 function App() {
   return (
     <>
-      <IncomeExpenceTracker />
+      <IncomeExpenseTracker />
       <DataFetcher />
     </>
   );

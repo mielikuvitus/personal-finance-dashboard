@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const IncomeExpenceTracker: React.FC = () => {
+const IncomeExpenseTracker: React.FC = () => {
   const [income, setIncome] = useState<number>(0);
   const [expense, setExpense] = useState<number>(0);
 
@@ -28,4 +28,4 @@ const IncomeExpenceTracker: React.FC = () => {
   );
 };
 
-export default IncomeExpenceTracker;
+export default IncomeExpenseTracker;
