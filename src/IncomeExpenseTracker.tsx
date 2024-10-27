@@ -8,16 +8,18 @@ const IncomeExpenseTracker: React.FC = () => {
     <div>
       <h1>Personal Finance Dashboard</h1>
       <div>
-        <label>Income: </label>
+        <label htmlFor="income">Income: </label>
         <input
+          id="income"
           type="number"
           value={income}
           onChange={(e) => setIncome(Number(e.target.value))}
         />
       </div>
       <div>
-        <label>Expense: </label>
+        <label htmlFor="expense">Expense: </label>
         <input
+          id="expense"
           type="number"
           value={expense}
           onChange={(e) => setExpense(Number(e.target.value))}
